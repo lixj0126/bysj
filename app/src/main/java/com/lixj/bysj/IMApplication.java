@@ -1,3 +1,5 @@
+package com.lixj.bysj;
+
 import android.app.Application;
 
 import java.io.BufferedReader;

@@ -17,13 +17,21 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+    }
+
 }
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
     compile project(':selectorphotolibrary')
-    compile 'com.android.support:appcompat-v7:23.3.0'
     compile files('libs/android-support-v4.jar')
     compile files('libs/androidasync-2.1.6.jar')
     compile files('libs/BmobNewIM_2.0.4_20160429.jar')
@@ -33,5 +41,4 @@ dependencies {
     compile files('libs/org.apache.http.legacy.jar')
     compile 'org.greenrobot:eventbus:3.0.0'
     compile 'com.jakewharton:butterknife:7.0.1'
-    compile 'com.android.support:recyclerview-v7:23.3.0'
 }
